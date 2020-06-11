@@ -1,10 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.atlassian</groupId>
+    <groupId>com.atlassian.connector</groupId>
     <artifactId>connector</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>tests</artifactId>
   <packaging>pom</packaging>
+  <modules>
+      <module>com.atlassian.connector.commons.tests.dependencies</module>
+      <module>com.atlassian.connector.eclipse.bamboo.tests</module>
+      <module>com.atlassian.connector.eclipse.bamboo.testsUI</module>
+      <module>com.atlassian.connector.eclipse.jira.tests</module>
+      <module>com.atlassian.connector.eclipse.tests</module>
+  </modules>
 </project>

@@ -1,10 +1,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.atlassian</groupId>
+    <groupId>com.atlassian.connector</groupId>
     <artifactId>connector</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>features</artifactId>
   <packaging>pom</packaging>
+  <modules>
+      <module>com.atlassian.connector.commons-feature</module>
+      <module>com.atlassian.connector.eclipse.bamboo-feature</module>
+      <module>com.atlassian.connector.eclipse.commons-feature</module>
+      <module>com.atlassian.connector.eclipse.crucible-feature</module>
+      <module>com.atlassian.connector.eclipse.cvs-feature</module>
+      <module>com.atlassian.connector.eclipse.dependencies-feature</module>
+      <module>com.atlassian.connector.eclipse.fisheye-feature</module>
+      <module>com.atlassian.connector.eclipse.jira-feature</module>
+      <module>com.atlassian.connector.eclipse.monitor-feature</module>
+      <module>com.atlassian.connector.eclipse.perforce-feature</module>
+      <module>com.atlassian.connector.eclipse.subclipse-feature</module>
+      <module>com.atlassian.connector.eclipse.subversive-feature</module>
+      <module>com.atlassian.connector.eclipse.test-feature</module>
+      <module>com.atlassian.connector.eclipse-feature</module>
+  </modules>
 </project>

@@ -1,14 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.atlassian</groupId>
+    <groupId>com.atlassian.connector</groupId>
     <artifactId>connector</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
         <tycho-version>1.7.0</tycho-version>
-        <tycho-versions-version>0.26.0</tycho-versions-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
 
@@ -17,9 +16,7 @@
         <!-- Orbit. From Photon because we need com.ibm.icu.base <orbit-p2-repo.url>http://download.eclipse.org/tools/orbit/downloads/drops/R20180330011457/repository</orbit-p2-repo.url> -->
         <!-- Nebula -->
         <nebula-p2-repo.url>http://download.eclipse.org/nebula/releases/latest</nebula-p2-repo.url>
-        <!-- DBeaver Maven dependencies
-        <local-p2-repo.url>https://dbeaver.io/eclipse-repo</local-p2-repo.url>
-        -->
+        <!-- DBeaver Maven dependencies <local-p2-repo.url>https://dbeaver.io/eclipse-repo</local-p2-repo.url> -->
         <!-- <key.storage.path>/etc/</key.storage.path> <tsa/> -->
     </properties>
 
@@ -50,6 +47,61 @@
     <build>
         <sourceDirectory>${project.basedir}/src</sourceDirectory>
         <testSourceDirectory>${project.basedir}/tests</testSourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.3.0</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-site-plugin</artifactId>
+                    <version>3.9.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.1.2</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.eclipse.tycho</groupId>
+                    <artifactId>tycho-source-plugin</artifactId>
+                    <version>${tycho.version}</version>
+                    <executions>
+                        <execution>
+                            <id>attach-source</id>
+                            <goals>
+                                <goal>plugin-source</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+            </plugins>
+
+        </pluginManagement>
         <plugins>
 
             <!-- Tycho target platform -->
@@ -117,8 +169,8 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <Built-By>jkiss.org</Built-By>
-                            <Created-By>jkiss.org</Created-By>
+                            <Built-By>ballroomdancemusic.info</Built-By>
+                            <Created-By>ballroomdancemusic.info</Created-By>
                             <Build-Time>${maven.build.timestamp}</Build-Time>
                         </manifestEntries>
                         <addMavenDescriptor>false</addMavenDescriptor>
@@ -127,50 +179,33 @@
             </plugin>
 
             <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-source-plugin</artifactId>
+                <version>1.7.0</version>
+            </plugin>
+
+            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <groupId>org.apache.maven.plugins</groupId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.tycho</groupId>
+                <artifactId>target-platform-configuration</artifactId>
+                <version>${tycho.version}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <resolver>p2</resolver>
                 </configuration>
             </plugin>
-        </plugins>
+
+            </plugins>
     </build>
 
     <profiles>
-        <!-- Profile for jars sign
-        <profile>
-            <id>sign-code</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-jarsigner-plugin</artifactId>
-                        <version>1.4</version>
-                        <configuration>
-                            <keystore>${key.storage.path}/jar-sign.keystore</keystore>
-                            <tsa>${tsa}</tsa>
-                            <tsacert>dbeaver</tsacert>
-                            <storepass>dbeaver</storepass>
-                            <alias>dbeaver</alias>
-                            <keypass>dbeaver</keypass>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign</id>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-         -->
+        <!-- Profile for jars sign <profile> <id>sign-code</id> <activation> <activeByDefault>false</activeByDefault> </activation> <build> <plugins>
+            <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jarsigner-plugin</artifactId> <version>1.4</version> <configuration> <keystore>${key.storage.path}/jar-sign.keystore</keystore>
+            <tsa>${tsa}</tsa> <tsacert>dbeaver</tsacert> <storepass>dbeaver</storepass> <alias>dbeaver</alias> <keypass>dbeaver</keypass> </configuration>
+            <executions> <execution> <id>sign</id> <goals> <goal>sign</goal> </goals> </execution> </executions> </plugin> </plugins> </build> </profile> -->
     </profiles>
 
     <!-- unit tests -->
@@ -182,6 +217,7 @@
             <version>1.10.19</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
