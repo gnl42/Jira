@@ -25,7 +25,6 @@
       <module>com.atlassian.connector.eclipse.jira.core</module>
       <module>com.atlassian.connector.eclipse.jira.ui</module>
       <module>com.atlassian.connector.eclipse.monitor.core</module>
-      <module>com.atlassian.connector.eclipse.monitor.server</module>
       <module>com.atlassian.connector.eclipse.monitor.ui</module>
       <module>com.atlassian.connector.eclipse.perforce.core</module>
       <module>com.atlassian.connector.eclipse.perforce.ui</module>
