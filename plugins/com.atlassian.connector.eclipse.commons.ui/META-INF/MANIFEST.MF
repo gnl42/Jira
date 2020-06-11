@@ -24,6 +24,5 @@ Require-Bundle: org.eclipse.swt,
  org.eclipse.mylyn.tasks.ui,
  org.eclipse.ui.browser,
  org.eclipse.ui.workbench,
- org.jetbrains.annotations;resolution:=optional,
  com.atlassian.connector.eclipse.commons.core
 Bundle-ClassPath: .

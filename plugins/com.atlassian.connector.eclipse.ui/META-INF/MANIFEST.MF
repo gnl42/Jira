@@ -28,7 +28,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.mylyn.tasks.core,
  org.eclipse.mylyn.tasks.ui,
  com.atlassian.connector.eclipse.commons.ui,
- org.jetbrains.annotations;resolution:=optional,
  com.atlassian.connector.eclipse.core
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

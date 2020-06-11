@@ -29,7 +29,6 @@ Require-Bundle: com.atlassian.connector.commons,
  org.eclipse.jdt.core;resolution:=optional,
  org.eclipse.jdt.debug.ui;resolution:=optional,
  org.eclipse.jdt.ui;resolution:=optional,
- org.jetbrains.annotations;resolution:=optional,
  org.eclipse.ui.editors
 Bundle-Activator: com.atlassian.connector.eclipse.internal.bamboo.ui.BambooUiPlugin
 Bundle-ActivationPolicy: lazy
