@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.atlassian.connector</groupId>
     <artifactId>tests</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
   </parent>
   <artifactId>com.atlassian.connector.eclipse.bamboo.tests</artifactId>
   <packaging>eclipse-test-plugin</packaging>

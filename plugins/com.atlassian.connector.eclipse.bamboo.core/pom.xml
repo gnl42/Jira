@@ -4,11 +4,17 @@
     <parent>
         <groupId>com.atlassian.connector</groupId>
         <artifactId>plugins</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.1</version>
     </parent>
 
     <groupId>com.atlassian.connector.eclipse.bamboo.core</groupId>
     <artifactId>com.atlassian.connector.eclipse.bamboo.core</artifactId>
     <packaging>eclipse-plugin</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.realityforge.org.jetbrains.annotations</groupId>
+            <artifactId>org.jetbrains.annotations</artifactId>
+        </dependency>
+    </dependencies>
 </project>

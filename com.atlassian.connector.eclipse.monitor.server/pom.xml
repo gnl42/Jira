@@ -6,7 +6,7 @@
     <groupId>com.atlassian.connector.eclipse.monitor</groupId>
     <artifactId>server</artifactId>
     <packaging>war</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Atlassian Connector for Eclipse Usage Collector Server</name>
     <dependencies>
         <dependency>

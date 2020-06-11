@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.atlassian.connector</groupId>
     <artifactId>plugins</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
   </parent>
   <artifactId>com.atlassian.connector.eclipse.jira.ui</artifactId>
   <packaging>eclipse-plugin</packaging>
