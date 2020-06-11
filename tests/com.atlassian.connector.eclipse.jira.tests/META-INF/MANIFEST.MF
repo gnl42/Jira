@@ -28,7 +28,7 @@ Export-Package: com.atlassian.connector.eclipse.jira.tests;x-friends:="com.atlas
  com.atlassian.connector.eclipse.jira.tests.model;x-internal:=true,
  com.atlassian.connector.eclipse.jira.tests.ui;x-internal:=true,
  com.atlassian.connector.eclipse.jira.tests.util;x-internal:=true
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: J2SE-1.8
 Bundle-Vendor: Eclipse Mylyn
 Bundle-ClassPath: lib/hamcrest-all-1.3RC0.jar,.
 Import-Package: org.eclipse.mylyn.internal.tasks.ui.search
