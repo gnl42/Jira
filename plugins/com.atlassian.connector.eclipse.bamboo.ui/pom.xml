@@ -8,11 +8,4 @@
     </parent>
     <artifactId>com.atlassian.connector.eclipse.bamboo.ui</artifactId>
     <packaging>eclipse-plugin</packaging>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.realityforge.org.jetbrains.annotations</groupId>
-            <artifactId>org.jetbrains.annotations</artifactId>
-        </dependency>
-    </dependencies>
 </project>

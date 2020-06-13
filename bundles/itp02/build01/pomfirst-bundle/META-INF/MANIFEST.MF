@@ -1,13 +1,12 @@
 Manifest-Version: 1.0
+Bnd-LastModified: 1592071558245
+Build-Jdk: 11.0.7
+Built-By: George
 Bundle-ManifestVersion: 2
-Created-By: 11.0.7 (AdoptOpenJDK)
-Tool: Bnd-0.0.357
-Bnd-LastModified: 1592050255405
-Export-Package: tycho.demo.itp02.pomfirst;uses:="org.codehaus.plexus.uti
- l";version="1.0.1.SNAPSHOT"
-Import-Package: org.codehaus.plexus.util,tycho.demo.itp02.pomfirst;versi
- on="1.0"
 Bundle-Name: pomfirst-bundle
 Bundle-SymbolicName: tycho.demo.itp02.pomfirst-bundle
 Bundle-Version: 1.0.1.SNAPSHOT
-
+Created-By: Apache Maven Bundle Plugin
+Export-Package: tycho.demo.itp02.pomfirst;version="1.0.1"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-4.2.0.201903051501

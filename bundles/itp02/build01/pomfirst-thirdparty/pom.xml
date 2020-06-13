@@ -12,12 +12,39 @@
 	<artifactId>pomfirst-thirdparty</artifactId>
 	<packaging>bundle</packaging>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.codehaus.plexus</groupId>
-			<artifactId>plexus-utils</artifactId>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>19.0.0</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.3.1</version>
+            <!--  <version>1.4.12</version>  -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jaxen-jdom</artifactId>
+            <version>1.0-FCS</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.19.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.perforce</groupId>
+            <artifactId>p4java</artifactId>
+            <version>2019.1.1939255</version>
+        </dependency>
+
+    </dependencies>
 
 	<build>
 		<plugins>
@@ -27,13 +54,22 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Embed-Dependency>
-							plexus-utils
-						</Embed-Dependency>
-						<_exportcontents>
-							org.codehaus.plexus.util.*;version="2.0.7"
-						</_exportcontents>
-						<Bundle-ClassPath>{maven-dependencies}</Bundle-ClassPath>
+                        <Embed-Dependency>
+                            *;scope=compile|runtime
+                        </Embed-Dependency>
+                        <_exportcontents>
+                            org.jetbrains.annotations.*;version="19.0.0",
+                            com.thoughtworks.xstream.*;version="1.4.12",
+                            org.jdom;version="1.0.0",
+                            org.jdom.adapters;version="1.0.0",
+                            org.jdom.filter;version="1.0.0",
+                            org.jdom.input;version="1.0.0",
+                            org.jdom.output;version="1.0.0",
+                            org.jdom.transform;version="1.0.0",
+                            org.jdom.xpath;version="1.0.0",
+                            com.perforce.*;version="2019.1.1939255",
+                            com.sun.jersey.*;version="1.19.4"
+                        </_exportcontents>
 						<Embed-Transitive>true</Embed-Transitive>
 						<Embed-Directory>jars</Embed-Directory>
 						<_failok>true</_failok>

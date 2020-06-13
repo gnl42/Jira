@@ -10,11 +10,4 @@
     <groupId>com.atlassian.connector.eclipse.bamboo.core</groupId>
     <artifactId>com.atlassian.connector.eclipse.bamboo.core</artifactId>
     <packaging>eclipse-plugin</packaging>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.realityforge.org.jetbrains.annotations</groupId>
-            <artifactId>org.jetbrains.annotations</artifactId>
-        </dependency>
-    </dependencies>
 </project>
