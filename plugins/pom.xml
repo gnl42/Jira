@@ -9,8 +9,9 @@
     <artifactId>plugins</artifactId>
     <packaging>pom</packaging>
     <modules>
+        <module>com.atlassian.commons</module>
         <module>com.atlassian.connector.eclipse.branding.ui</module>
-         <module>com.atlassian.connector.eclipse.monitor.core</module>
+        <module>com.atlassian.connector.eclipse.monitor.core</module>
         <module>com.atlassian.connector.eclipse.commons.core</module>
         <module>com.atlassian.connector.eclipse.commons.ui</module>
         <module>com.atlassian.connector.eclipse.core</module>
