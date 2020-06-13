@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Created-By: Apache Maven Bundle Plugin
+Tool: Bnd-0.0.357
+Bnd-LastModified: 1592050133203
+Export-Package: org.codehaus.plexus.util.reflection;version="2.0.7",org.
+ codehaus.plexus.util.cli;version="2.0.7",org.codehaus.plexus.util.cli.s
+ hell;version="2.0.7",org.codehaus.plexus.util;version="2.0.7",org.codeh
+ aus.plexus.util.xml.pull;version="2.0.7",org.codehaus.plexus.util.dag;v
+ ersion="2.0.7",org.codehaus.plexus.util.introspection;version="2.0.7",o
+ rg.codehaus.plexus.util.xml;version="2.0.7",org.codehaus.plexus.util.io
+ ;version="2.0.7"
+Import-Package: org.codehaus.plexus.util;version="2.0",org.codehaus.plex
+ us.util.cli;version="2.0",org.codehaus.plexus.util.cli.shell;version="2
+ .0",org.codehaus.plexus.util.dag;version="2.0",org.codehaus.plexus.util
+ .introspection;version="2.0",org.codehaus.plexus.util.io;version="2.0",
+ org.codehaus.plexus.util.reflection;version="2.0",org.codehaus.plexus.u
+ til.xml;version="2.0",org.codehaus.plexus.util.xml.pull;version="2.0"
+Bundle-ClassPath: jars/plexus-utils-2.0.7.jar
+Embed-Transitive: true
+Bundle-Version: 1.0.1.SNAPSHOT
+Bundle-SymbolicName: tycho.demo.itp02.pomfirst-thirdparty
+Embed-Dependency: plexus-utils
+Embed-Directory: jars
+Bundle-Name: pomfirst-thirdparty
+Built-By: George
+Build-Jdk: 11.0.7
+
