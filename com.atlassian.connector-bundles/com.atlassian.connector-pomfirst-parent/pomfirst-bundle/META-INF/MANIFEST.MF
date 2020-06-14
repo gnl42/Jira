@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1592093938810
+Build-Jdk: 11.0.7
+Built-By: George
+Bundle-ManifestVersion: 2
+Bundle-Name: pomfirst-bundle
+Bundle-SymbolicName: com.atlassian.connector.pomfirst-bundle
+Bundle-Version: 1.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: com.atlassian.connector.pomfirst-parent;version="1.0.1"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-4.2.0.201903051501

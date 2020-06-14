@@ -12,7 +12,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.mylyn.commons.net;bundle-version="[3.2.0,4.0.0)",
  com.atlassian.connector.commons,
  com.atlassian.connector.eclipse.core,
- com.atlassian.connector.eclipse.commons.core;visibility:=reexport
+ com.atlassian.connector.eclipse.commons.core;visibility:=reexport,
+ org.jetbrains.annotations;resolution:=optional,
+ com.atlassian.connector.pomfirst-thirdparty;bundle-version="1.0.1"
 Export-Package: com.atlassian.connector.eclipse.internal.bamboo.core;x-friends:="com.atlassian.connector.eclipse.bamboo.tests,com.atlassian.connector.eclipse.bamboo.ui",
  com.atlassian.connector.eclipse.internal.bamboo.core.client;x-friends:="com.atlassian.connector.eclipse.bamboo.tests,com.atlassian.connector.eclipse.bamboo.ui"
 Bundle-Vendor: Atlassian

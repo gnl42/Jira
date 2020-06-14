@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.atlassian.connector</groupId>
+		<artifactId>com.atlassian.connector-pomfirst-parent</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>pomfirst-thirdparty</artifactId>
+	<packaging>bundle</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+
+        </dependency>
+
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jaxen-jdom</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.perforce</groupId>
+            <artifactId>p4java</artifactId>
+        </dependency>
+
+    </dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<version>${version.bundle.plugin}</version>
+				<configuration>
+					<instructions>
+                        <Embed-Dependency>
+                            *;scope=compile|runtime
+                        </Embed-Dependency>
+                        <_exportcontents>
+                            org.jetbrains.annotations.*;version="19.0.0",
+                            com.thoughtworks.xstream.*;version="1.4.12",
+                            org.jdom;version="1.0.0",
+                            org.jdom.adapters;version="1.0.0",
+                            org.jdom.filter;version="1.0.0",
+                            org.jdom.input;version="1.0.0",
+                            org.jdom.output;version="1.0.0",
+                            org.jdom.transform;version="1.0.0",
+                            org.jdom.xpath;version="1.0.0",
+                            com.perforce.*;version="2019.1.1939255",
+                            com.sun.jersey.*;version="1.19.4"
+                        </_exportcontents>
+						<Embed-Transitive>true</Embed-Transitive>
+						<Embed-Directory>jars</Embed-Directory>
+						<_failok>true</_failok>
+						<_nouses>true</_nouses>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<lifecycleMappings>
+								<lifecycleMapping>
+									<packagingType>bundle</packagingType>
+									<lifecycleMappingId>org.sonatype.tycho.m2e.wrapperBundle</lifecycleMappingId>
+								</lifecycleMapping>
+							</lifecycleMappings>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.felix</groupId>
+										<artifactId>maven-bundle-plugin</artifactId>
+										<version>${version.bundle.plugin}</version>
+										<goals>
+											<goal>bundle</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<configurator>
+											<id>org.sonatype.tycho.m2e.wrapperBundle</id>
+										</configurator>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.felix</groupId>
+										<artifactId>maven-bundle-plugin</artifactId>
+                                        <version>${version.bundle.plugin}</version>
+										<goals>
+											<goal>manifest</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
+
+</project>

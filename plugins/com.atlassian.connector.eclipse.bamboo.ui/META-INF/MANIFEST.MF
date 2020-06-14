@@ -30,7 +30,8 @@ Require-Bundle: com.atlassian.connector.commons,
  org.eclipse.jdt.debug.ui;resolution:=optional,
  org.eclipse.jdt.ui;resolution:=optional,
  org.eclipse.ui.editors,
- com.atlassian.commons;bundle-version="1.0.1"
+ com.atlassian.commons;bundle-version="1.0.1",
+ com.atlassian.connector.pomfirst-thirdparty;bundle-version="1.0.1"
 Bundle-Activator: com.atlassian.connector.eclipse.internal.bamboo.ui.BambooUiPlugin
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

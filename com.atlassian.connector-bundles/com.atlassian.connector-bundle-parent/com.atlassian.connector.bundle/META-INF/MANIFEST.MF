@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: bundle Plug-in
+Bundle-SymbolicName: com.atlassian.connector.bundle
+Bundle-Version: 1.0.1.qualifier
+Import-Package: com.atlassian.connector.pomfirst-parent 
+Export-Package: com.atlassian.connector.bundle
+Require-Bundle: com.atlassian.connector.pomfirst-bundle;bundle-version="1.0.1"

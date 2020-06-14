@@ -34,7 +34,6 @@ import org.eclipse.mylyn.commons.net.UnsupportedRequestException;
 import org.eclipse.mylyn.tasks.core.RepositoryStatus;
 import org.eclipse.mylyn.tasks.core.TaskRepository;
 import org.jetbrains.annotations.NotNull;
-import javax.annotation.
 
 import java.io.IOException;
 

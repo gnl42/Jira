@@ -120,7 +120,7 @@
                 <configuration> <target> <artifact> <groupId>com.atlassian</groupId> <artifactId>connector</artifactId> <version>1.0.1</version> </artifact>
                 </target> </configuration> </plugin> -->
 
-            <!-- Tycho build 
+            <!-- Tycho build
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>target-platform-configuration</artifactId>
@@ -179,7 +179,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
- <!--                  <compilerArgument>-warn:+discouraged,forbidden</compilerArgument>  -->  
+ <!--                  <compilerArgument>-warn:+discouraged,forbidden</compilerArgument>  -->
                 </configuration>
             </plugin>
 
@@ -210,7 +210,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <groupId>org.apache.maven.plugins</groupId>
             </plugin>
-<!-- 
+<!--
             <plugin>
                 <groupId>org.sonatype.tycho</groupId>
                 <artifactId>target-platform-configuration</artifactId>
@@ -229,10 +229,4 @@
             <tsa>${tsa}</tsa> <tsacert>dbeaver</tsacert> <storepass>dbeaver</storepass> <alias>dbeaver</alias> <keypass>dbeaver</keypass> </configuration>
             <executions> <execution> <id>sign</id> <goals> <goal>sign</goal> </goals> </execution> </executions> </plugin> </plugins> </build> </profile> -->
     </profiles>
-
-    <!-- unit tests -->
-    <dependencyManagement>
-        <dependencies>
-        </dependencies>
-    </dependencyManagement>
 </project>

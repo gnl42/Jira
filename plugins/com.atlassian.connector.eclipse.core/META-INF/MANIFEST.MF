@@ -15,7 +15,8 @@ Require-Bundle:
  com.atlassian.connector.eclipse.commons.core,
  org.jetbrains.annotations;resolution:=optional,
  com.atlassian.connector,
- com.atlassian.commons;bundle-version="1.0.1"
+ com.atlassian.commons;bundle-version="1.0.1",
+ com.atlassian.connector.pomfirst-thirdparty;bundle-version="1.0.1"
 Export-Package: com.atlassian.connector.eclipse.internal.core;
   x-friends:="com.atlassian.connector.eclipse.bamboo.core,
    com.atlassian.connector.eclipse.bamboo.ui,
